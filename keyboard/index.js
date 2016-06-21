@@ -85,10 +85,34 @@ function letterListener (e) {
     window.scroll(0, 10e3)
 
   if (isPrintable(e)) {
-    e.target.innerHTML += getCodeInMode(e.code, getMode())
+    changeText(e)
   } else {
     e.target.focus()
   }
+}
+
+function changeText (e) {
+  const selection = window.getSelection()
+  const node = selection.baseNode
+  const textContent = node.textContent
+  const offset = selection.baseOffset
+  node.textContent = textContent.substring(0, offset) + getCodeInMode(e.code, getMode()) + textContent.substring(offset)
+
+
+  var range = document.createRange()
+  range.selectNode(textarea)
+  selection.addRange(range)
+  console.log(selection)
+  console.log(range)
+
+  // var selection = window.getSelection()
+  // var content = textarea
+  // var html = content.innerHTML
+  // console.log(selection, content)
+  // content.innerHTML = html.substring(0, selection.focusOffset) +
+  //   getCodeInMode(e.code, getMode()) +
+  //   html.substring(selection.focusOffset + selection.anchorOffset)
+  // e.target.innerHTML += getCodeInMode(e.code, getMode())
 }
 
 // data
