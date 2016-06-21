@@ -7,8 +7,8 @@ div.keyboard {
   background: #D5D9DC;
   background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=d5d9dcff&noise=656b70&density=100&opacity=9');
   background-size: 300px;
-  box-shadow: inset color(black alpha(60%)) 0 60px 30px -40px,
-              inset color(white alpha(75%)) 0 83px 20px -40px,
+  box-shadow: inset color(#333334 alpha(55%)) 0 60px 30px -40px,
+              inset color(white alpha(85%)) 0 83px 20px -40px,
               color(black alpha(15%)) 1px 1px 30px;
   border-radius: 15px;
 
