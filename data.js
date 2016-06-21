@@ -403,8 +403,20 @@ module.exports = {
   AltRight: { keyCode: 18 },
 
   // arrows
-  ArrowLeft: { keyCode: 37 },
-  ArrowDown: { keyCode: 40 },
-  ArrowUp: { keyCode: 38 },
-  ArrowRight: { keyCode: 39  }
+  ArrowLeft: {
+    printable: true,
+    keyCode: 37
+  },
+  ArrowDown: {
+    printable: true,
+    keyCode: 40
+  },
+  ArrowUp: {
+    printable: true,
+    keyCode: 38
+  },
+  ArrowRight: {
+    printable: true,
+    keyCode: 39
+     }
 }
