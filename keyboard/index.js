@@ -8,6 +8,7 @@ const buttons = document.querySelectorAll('button')
 const textarea = document.querySelector('.textarea')
 const eventName = 'letterReceiver'
 const event = new CustomEvent(eventName)
+var anchor = document.createRange()
 
 textarea.addEventListener('keydown', (e) => {
   if (isPrintable(e)) {
@@ -18,7 +19,8 @@ textarea.addEventListener('keydown', (e) => {
 })
 
 // send event
-buttons.forEach((b) => b.addEventListener('click', clickEmitter))
+buttons.forEach((b) => b.addEventListener('mousedown', clickEmitter))
+buttons.forEach((b) => b.addEventListener('mouseup', buttonDisactivator))
 
 function clickEmitter (e) {
   const button = buttonDOMChecker(e)
@@ -26,8 +28,6 @@ function clickEmitter (e) {
   e.code = code
   letterSender(e)
 }
-
-
 
 function buttonDOMChecker (e) {
   const target = e.target
@@ -100,28 +100,15 @@ function changeText (e) {
   const anchorOffset = selection.anchorOffset
   node.textContent = textContent.substring(0, anchorOffset) + getCodeInMode(e.code, getMode()) + textContent.substring(offset)
 
+  selectTextAt(node, e, selection, anchorOffset)
+}
 
-  // var range = document.createRange()
-  // range.selectNode(textarea)
-  // selection.addRange(range)
-  // console.log(selection)
-  // console.log(range)
-
+function selectTextAt (node, e, selection, anchorOffset) {
   var hasCode = getCodeInMode(e.code, getMode())
-  var range = document.createRange()
-  range.setStart(node, anchorOffset + (hasCode ? 1 : 0))
-  range.setEnd(node, anchorOffset + (hasCode ? 1 : 0))
+  anchor.setStart(node, anchorOffset + (hasCode ? 1 : 0))
+  anchor.setEnd(node, anchorOffset + (hasCode ? 1 : 0))
   selection.removeAllRanges();
-  selection.addRange(range);
-
-  // var selection = window.getSelection()
-  // var content = textarea
-  // var html = content.innerHTML
-  // console.log(selection, content)
-  // content.innerHTML = html.substring(0, selection.focusOffset) +
-  //   getCodeInMode(e.code, getMode()) +
-  //   html.substring(selection.focusOffset + selection.anchorOffset)
-  // e.target.innerHTML += getCodeInMode(e.code, getMode())
+  selection.addRange(anchor)
 }
 
 // data

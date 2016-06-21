@@ -380,7 +380,7 @@ module.exports = {
     keyCode: 9
   },
   Enter: {
-    printable: true,
+    // printable: true,
     keyCode: 13
   },
 
