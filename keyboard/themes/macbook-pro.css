@@ -3,6 +3,7 @@
 }
 
 .keyboard {
+  border-radius: 8px;
   background: #E0E1DB;
   box-shadow: inset #fff -10px 0 15px -5px,
               inset #fff 10px 0 15px -5px,
@@ -10,6 +11,7 @@
               inset black 0 10px 50px -20px;
   & > .row {
     & button {
+      border-radius: 4px;
       background: #232527;
       color: color(white alpha(80%));
       box-shadow: 0 -1px 3px 0 white;

@@ -1,14 +1,17 @@
 @import url("http://cdn.web-fonts.ge/fonts/dejavu-sans/css/dejavu-sans.min.css");
 
 body {
-  background: #F1F1F0;
+  /* MACBOOK PRO */
+  /* background: #F1F1F0; */
+  /* MAC */
+  background: white;
 }
 
 .keyboard {
   position: fixed;
   left: 50%;
   margin-left: -480px;
-  bottom: 3rem;
+  bottom: 2rem;
 }
 
 .textarea {
@@ -16,7 +19,10 @@ body {
   width: 980px;
   margin: 0 auto;
   border: 0;
-  padding-bottom: 450px;
+  /* MACBOOK PRO */
+  /* padding-bottom: 450px; */
+  /* MAC */
+  padding-bottom: 520px;
   box-sizing: border-box;
   box-sizing: border-box;
   transition: .3s ease background;

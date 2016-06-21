@@ -1,6 +1,7 @@
 'use strict'
 
 require('./style.css')
+require('./themes/mac.css')
 require('./grid.css')
 
 const buttons = document.querySelectorAll('button')
@@ -80,6 +81,9 @@ function buttonDisactivator (e) {
 textarea.addEventListener(eventName, letterListener)
 
 function letterListener (e) {
+  if (false) // if selection is at the bottom
+    window.scroll(0, 10e3)
+
   if (isPrintable(e)) {
     e.target.innerHTML += getCodeInMode(e.code, getMode())
   } else {
