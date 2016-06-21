@@ -20,9 +20,10 @@ textarea.addEventListener('keydown', (e) => {
 
 // send event
 buttons.forEach((b) => b.addEventListener('mousedown', clickEmitter))
-buttons.forEach((b) => b.addEventListener('mouseup', buttonDisactivator))
+buttons.forEach((b) => b.addEventListener('mouseup', buttonDisactivatorSelf))
 
 function clickEmitter (e) {
+  e.preventDefault()
   const button = buttonDOMChecker(e)
   const code = checkButtonCode(button)
   e.code = code
@@ -73,6 +74,14 @@ function buttonActivator (e) {
 
 function buttonDisactivator (e) {
   const button = buttonQuerySelector(e)
+  button.classList.remove('active')
+  console.log('eeeeeeeeeeeeeeeeeeeeeeeeeee')
+  console.log(e)
+  clearMode(e.code)
+}
+
+function buttonDisactivatorSelf (e) {
+  const button = e.target
   button.classList.remove('active')
   clearMode(e.code)
 }
