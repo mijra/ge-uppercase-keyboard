@@ -1,0 +1,155 @@
+:root {
+  --green: #00CA00;
+}
+
+.keyboard {
+  width: 980px;
+  font-family: 'Dejavu Sans', 'Andale Mono';
+  font-weight: 600;
+  background: #E0E1DB;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: inset #fff -10px 0 15px -5px,
+              inset #fff 10px 0 15px -5px,
+              inset black 0 -10px 50px -20px,
+              inset black 0 10px 50px -20px;
+
+  & > .row {
+    display: flex;
+    align-items: stretch;
+
+    & button,
+    & > div {
+      min-height: 25px;
+      flex: 5;
+      margin: 5px;
+      display: flex;
+      padding: 0 8px;
+      position: relative;
+    }
+
+    & > div {
+      flex-direction: column;
+      align-items: stretch;
+
+      & > button {
+        margin: 0.5px -8px;
+
+        & span {
+          height: auto;
+        }
+
+        &:first-child:not(:last-child) {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:last-child:not(:first-child) {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+
+    & button {
+      flex: 5;
+      border-radius: 4px;
+      background: #232527;
+      color: color(white alpha(80%));
+      appearance: none;
+      border: 0;
+      box-shadow: 0 -1px 3px 0 white;
+      font-size: 1em;
+      line-height: 1;
+      border-bottom: 3px solid black;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:focus {
+        outline: 0;
+        color: color(white alpha(90%));
+      }
+
+      &.active,
+      &:active {
+        margin-top: 6px;
+        border-bottom: 0;
+        outline: 0;
+        box-shadow: 0 -1px 2px 0 white;
+      }
+
+      &.half {
+        align-self: flex-start;
+
+        & span {
+          height: auto;
+        }
+      }
+
+      &.half.end {
+        align-self: flex-end;
+      }
+
+      & span {
+        height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 5px;
+
+        &.hide {
+          display: none;
+        }
+
+        &:first-child:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        &:last-child:not(:first-child) {
+          margin-top: 0;
+        }
+
+        &.small {
+          font-size: .85em;
+        }
+
+        &.tiny {
+          font-size: .7em;
+        }
+
+        &.f {
+          position: absolute;
+          right: .6em;
+          bottom: .6em;
+          width: auto;
+          height: auto;
+          margin: 0;
+        }
+      }
+
+      &.left {
+        align-items: flex-start;
+      }
+
+      &.right {
+        align-items: flex-end;
+      }
+
+      & > .indicator {
+        opacity: .75;
+        transition: .5s ease color, .5s ease opacity;
+      }
+
+      &.active {
+        & > .indicator {
+          opacity: 1;
+          color: var(--green);
+        }
+      }
+    }
+  }
+}

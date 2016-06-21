@@ -1,0 +1,30 @@
+/* grid */
+.keyboard {
+  & > .row {
+    & > button {
+      &.flex40 {
+        flex: 40;
+      }
+
+      &.flex15 {
+        flex: 15;
+      }
+
+      &.flex10 {
+        flex: 10;
+      }
+
+      &.flex9 {
+        flex: 9;
+      }
+
+      &.flex8 {
+        flex: 8;
+      }
+
+      &.flex7 {
+        flex: 7;
+      }
+    }
+  }
+}
