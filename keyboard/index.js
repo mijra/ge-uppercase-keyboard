@@ -75,8 +75,6 @@ function buttonActivator (e) {
 function buttonDisactivator (e) {
   const button = buttonQuerySelector(e)
   button.classList.remove('active')
-  console.log('eeeeeeeeeeeeeeeeeeeeeeeeeee')
-  console.log(e)
   clearMode(e.code)
 }
 

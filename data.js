@@ -264,114 +264,212 @@ module.exports = {
   Digit1: {
     printable: true,
     keyCode: 49,
-    Default: '1'
+    Default: '1',
+    Shift: '!',
+    CapsLock: '1',
+    Shift_CapsLock: '!',
+    Alt_Shift: '⁄',
+    Alt: '¡'
   },
   Digit2: {
     printable: true,
     keyCode: 50,
-    Default: '2'
+    Default: '2',
+    Shift: '@',
+    CapsLock: '2',
+    Shift_CapsLock: '@',
+    Alt_Shift: '€',
+    Alt: '™'
   },
   Digit3: {
     printable: true,
     keyCode: 51,
-    Default: '3'
+    Default: '3',
+    Shift: '#',
+    CapsLock: '3',
+    Shift_CapsLock: '#',
+    Alt_Shift: '‹',
+    Alt: '£'
   },
   Digit4: {
     printable: true,
     keyCode: 52,
-    Default: '4'
+    Default: '4',
+    Shift: '$',
+    CapsLock: '4',
+    Shift_CapsLock: '$',
+    Alt_Shift: '›',
+    Alt: '¢'
   },
   Digit5: {
     printable: true,
     keyCode: 53,
-    Default: '5'
+    Default: '5',
+    Shift: '%',
+    CapsLock: '5',
+    Shift_CapsLock: '%',
+    Alt_Shift: 'ﬁ',
+    Alt: '∞'
   },
   Digit6: {
     printable: true,
     keyCode: 54,
-    Default: '6'
+    Default: '6',
+    Shift: '^',
+    CapsLock: '6',
+    Shift_CapsLock: '^',
+    Alt_Shift: 'ﬂ',
+    Alt: '§'
   },
   Digit7: {
     printable: true,
     keyCode: 55,
-    Default: '7'
+    Default: '7',
+    Shift: '&',
+    CapsLock: '7',
+    Shift_CapsLock: '&',
+    Alt_Shift: '‡',
+    Alt: '¶'
   },
   Digit8: {
     printable: true,
     keyCode: 56,
-    Default: '8'
+    Default: '8',
+    Shift: '*',
+    CapsLock: '8',
+    Shift_CapsLock: '*',
+    Alt_Shift: '°',
+    Alt: '•'
   },
   Digit9: {
     printable: true,
     keyCode: 57,
-    Default: '9'
+    Default: '9',
+    Shift: '(',
+    CapsLock: '9',
+    Shift_CapsLock: '(',
+    Alt_Shift: '·',
+    Alt: 'º'
   },
   Digit0: {
     printable: true,
     keyCode: 48,
-    Default: '0'
+    Default: '0',
+    Shift: ')',
+    CapsLock: '0',
+    Shift_CapsLock: ')',
+    Alt_Shift: '‚',
+    Alt: 'º'
   },
 
   // symbols
   IntlBackslash: {
     printable: true,
     keyCode: 192,
-    Default: '§'
+    Default: '§',
+    Shift: '±',
+    CapsLock: '§',
+    Shift_CapsLock: '±',
+    Alt: '§',
   },
   Minus: {
     printable: true,
     keyCode: 189,
-    Default: '-'
+    Default: '-',
+    Shift: '_',
+    CapsLock: '-',
+    Shift_CapsLock: '_',
+    Alt: '–',
   },
   Equal: {
     printable: true,
     keyCode: 187,
-    Default: '='
+    Default: '=',
+    Shift: '+',
+    CapsLock: '=',
+    Shift_CapsLock: '+',
+    Alt: '≠'
   },
   BracketLeft: {
     printable: true,
     keyCode: 219,
-    Default: '['
+    Default: '[',
+    Shift: '{',
+    CapsLock: '[',
+    Shift_CapsLock: '{',
+    Alt: '“'
   },
   BracketRight: {
     printable: true,
     keyCode: 221,
-    Default: ']'
+    Default: ']',
+    Shift: '}',
+    CapsLock: ']',
+    Shift_CapsLock: '}',
+    Alt: '‘'
   },
   Semicolon: {
     printable: true,
     keyCode: 186,
-    Default: ';'
+    Default: ';',
+    Shift: ':',
+    CapsLock: ';',
+    Shift_CapsLock: ':',
+    Alt: '…'
   },
   Quote: {
     printable: true,
     keyCode: 222,
-    Default: '\''
+    Default: '\'',
+    Shift: '"',
+    CapsLock: '\'',
+    Shift_CapsLock: '"',
+    Alt: 'æ'
   },
   Backslash: {
     printable: true,
     keyCode: 220,
-    Default: '\\'
+    Default: '\\',
+    Shift: '|',
+    CapsLock: '\\',
+    Shift_CapsLock: '|',
+    Alt: '«'
   },
   Backquote: {
     printable: true,
     keyCode: 192,
-    Default: '`'
+    Default: '`',
+    Shift: '~',
+    CapsLock: '`',
+    Shift_CapsLock: '~',
+    Alt: '`'
   },
   Comma: {
     printable: true,
     keyCode: 188,
-    Default: ','
+    Default: ',',
+    Shift: '<',
+    CapsLock: ',',
+    Shift_CapsLock: '<',
+    Alt: '≤'
   },
   Period: {
     printable: true,
     keyCode: 190,
-    Default: '.'
+    Default: '.',
+    Shift: '>',
+    CapsLock: '.',
+    Shift_CapsLock: '>',
+    Alt: '≥'
   },
   Slash: {
     printable: true,
     keyCode: 191,
-    Default: '/'
+    Default: '/',
+    Shift: '?',
+    CapsLock: '/',
+    Shift_CapsLock: '?',
+    Alt: '÷'
   },
 
   // space keys
@@ -380,7 +478,6 @@ module.exports = {
     keyCode: 9
   },
   Enter: {
-    // printable: true,
     keyCode: 13
   },
 
@@ -403,20 +500,8 @@ module.exports = {
   AltRight: { keyCode: 18 },
 
   // arrows
-  ArrowLeft: {
-    printable: true,
-    keyCode: 37
-  },
-  ArrowDown: {
-    printable: true,
-    keyCode: 40
-  },
-  ArrowUp: {
-    printable: true,
-    keyCode: 38
-  },
-  ArrowRight: {
-    printable: true,
-    keyCode: 39
-     }
+  ArrowLeft: { keyCode: 37 },
+  ArrowDown: { keyCode: 40 },
+  ArrowUp: { keyCode: 38 },
+  ArrowRight: { keyCode: 39 }
 }
