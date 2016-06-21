@@ -25,7 +25,7 @@
       align-items: stretch;
 
       & > button {
-        margin: 0.5px -8px;
+        margin: 1px -8px;
 
         & span {
           height: auto;
@@ -58,17 +58,10 @@
         outline: 0;
       }
 
-      &.active,
-      &:active {
-        margin-top: 6px;
-        border-bottom: 0;
-        outline: 0;
-      }
-
       &.key {
         font-size: 1.2em;
-        margin-bottom: 3px;
-        margin-top: 7px;
+        padding-bottom: 3px;
+        padding-top: 7px;
       }
 
       &.half {

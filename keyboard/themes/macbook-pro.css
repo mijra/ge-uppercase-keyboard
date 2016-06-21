@@ -17,6 +17,13 @@
       box-shadow: 0 -1px 3px 0 white;
       border-bottom: 3px solid black;
 
+      &.active,
+      &:active {
+        margin-top: 6px;
+        border-bottom: 0;
+        outline: 0;
+      }
+
       &:focus {
         color: color(white alpha(90%));
       }
