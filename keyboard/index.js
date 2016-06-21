@@ -93,6 +93,7 @@ function letterListener (e) {
 
 function changeText (e) {
   const selection = window.getSelection()
+  textarea.focus()
   const node = selection.baseNode
   const textContent = node.textContent
   const offset = selection.focusOffset
@@ -106,9 +107,10 @@ function changeText (e) {
   // console.log(selection)
   // console.log(range)
 
-  var range = document.createRange();
-  range.setStart(node, anchorOffset + 1)
-  range.setEnd(node, anchorOffset + 1)
+  var hasCode = getCodeInMode(e.code, getMode())
+  var range = document.createRange()
+  range.setStart(node, anchorOffset + (hasCode ? 1 : 0))
+  range.setEnd(node, anchorOffset + (hasCode ? 1 : 0))
   selection.removeAllRanges();
   selection.addRange(range);
 
