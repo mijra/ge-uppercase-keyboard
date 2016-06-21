@@ -95,15 +95,22 @@ function changeText (e) {
   const selection = window.getSelection()
   const node = selection.baseNode
   const textContent = node.textContent
-  const offset = selection.baseOffset
-  node.textContent = textContent.substring(0, offset) + getCodeInMode(e.code, getMode()) + textContent.substring(offset)
+  const offset = selection.focusOffset
+  const anchorOffset = selection.anchorOffset
+  node.textContent = textContent.substring(0, anchorOffset) + getCodeInMode(e.code, getMode()) + textContent.substring(offset)
 
 
-  var range = document.createRange()
-  range.selectNode(textarea)
-  selection.addRange(range)
-  console.log(selection)
-  console.log(range)
+  // var range = document.createRange()
+  // range.selectNode(textarea)
+  // selection.addRange(range)
+  // console.log(selection)
+  // console.log(range)
+
+  var range = document.createRange();
+  range.setStart(node, anchorOffset + 1)
+  range.setEnd(node, anchorOffset + 1)
+  selection.removeAllRanges();
+  selection.addRange(range);
 
   // var selection = window.getSelection()
   // var content = textarea
