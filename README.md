@@ -17,4 +17,4 @@ or
     npm run watch
 
 ## Contribution
-Please read intructions at [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
+We don't have any of intermediate steps in contribution. Please just read intructions at [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
