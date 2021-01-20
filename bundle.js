@@ -78,11 +78,11 @@
 	module.exports = function (css) {
 	    if (inserted.indexOf(css) >= 0) return;
 	    inserted.push(css);
-	    
+
 	    var elem = document.createElement('style');
 	    var text = document.createTextNode(css);
 	    elem.appendChild(text);
-	    
+
 	    if (document.head.childNodes.length) {
 	        document.head.insertBefore(elem, document.head.childNodes[0]);
 	    }
@@ -478,8 +478,6 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
-	// imports
-	exports.push([module.id, "@import url(http://cdn.web-fonts.ge/fonts/dejavu-sans/css/dejavu-sans.min.css);", ""]);
 
 	// module
 	exports.push([module.id, "html, body {\n  /* MACBOOK PRO */\n  /* background: #F1F1F0; */\n  /* MAC */\n  background: white;\n}\n\n.keyboard {\n  position: fixed;\n  left: 50%;\n  margin-left: -480px;\n  bottom: 32px;\n  bottom: 2rem;\n}\n\n.textarea {\n  padding: 1em;\n  width: 980px;\n  margin: 0 auto;\n  border: 0;\n  /* MACBOOK PRO */\n  /* padding-bottom: 450px; */\n  /* MAC */\n  padding-bottom: 530px;\n  box-sizing: border-box;\n  box-sizing: border-box;\n  transition: .3s ease background;\n  outline: none;\n  font-family: 'Source Sans', 'Dejavu Sans'\n}\n\n.textarea blockquote, .textarea p{\n  font-size: 15px;\n}\n\n.textarea .hint{\n  opacity: .5;\n  font-size: .8em;\n}\n\n.textarea .label{\n  font-size: .8em;\n  padding: .3em .5em .1em;\n  background: #ccc;\n  border-radius: 4px;\n  vertical-align: 2px;\n  white-space: nowrap;\n}\n\n.textarea hr{\n  margin: 32px 0;\n  margin: 2rem 0;\n  border: 0;\n  border-top: 1px solid white;\n  border-bottom: 1px solid currentColor;\n  opacity: .1;\n}", ""]);
