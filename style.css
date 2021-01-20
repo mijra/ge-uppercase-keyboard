@@ -1,0 +1,59 @@
+@import url("http://cdn.web-fonts.ge/fonts/dejavu-sans/css/dejavu-sans.min.css");
+
+html,
+body {
+  /* MACBOOK PRO */
+  /* background: #F1F1F0; */
+  /* MAC */
+  background: white;
+}
+
+.keyboard {
+  position: fixed;
+  left: 50%;
+  margin-left: -480px;
+  bottom: 2rem;
+}
+
+.textarea {
+  padding: 1em;
+  width: 980px;
+  margin: 0 auto;
+  border: 0;
+  /* MACBOOK PRO */
+  /* padding-bottom: 450px; */
+  /* MAC */
+  padding-bottom: 530px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  transition: .3s ease background;
+  outline: none;
+  font-family: 'Source Sans', 'Dejavu Sans';
+
+  & blockquote,
+  & p {
+    font-size: 15px;
+  }
+
+  & .hint {
+    opacity: .5;
+    font-size: .8em;
+  }
+
+  & .label {
+    font-size: .8em;
+    padding: .3em .5em .1em;
+    background: #ccc;
+    border-radius: 4px;
+    vertical-align: 2px;
+    white-space: nowrap;
+  }
+
+  & hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid currentColor;
+    opacity: .1;
+  }
+}

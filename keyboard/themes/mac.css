@@ -1,0 +1,46 @@
+:root {
+  --green: #00CA00;
+}
+
+div.keyboard {
+  padding-top: 6rem;
+  background: #D5D9DC;
+  background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=d5d9dcff&noise=656b70&density=100&opacity=9');
+  background-size: 300px;
+  box-shadow: inset color(#333334 alpha(55%)) 0 60px 30px -40px,
+              inset color(white alpha(85%)) 0 83px 20px -40px,
+              color(black alpha(15%)) 1px 1px 30px;
+  border-radius: 15px;
+
+  & > .row {
+    & button {
+      border-radius: 6px;
+      background: white;
+      color: color(black alpha(45%));
+      box-shadow: 0 0 0 2px color(black alpha(50%));
+      /* border-bottom: 3px solid black; */
+
+      &:focus {
+        color: color(black alpha(45%));
+      }
+
+      &.active,
+      &:active {
+        box-shadow: 0px 0px 0 2px color(black alpha(50%)),
+                    inset 0 0 15px color(black alpha(15%));
+      }
+
+      & > .indicator {
+        opacity: .75;
+        transition: .5s ease color, .5s ease opacity;
+      }
+
+      &.active {
+        & > .indicator {
+          opacity: 1;
+          color: var(--green);
+        }
+      }
+    }
+  }
+}

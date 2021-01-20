@@ -1,0 +1,125 @@
+.keyboard {
+  width: 980px;
+  font-family: 'Dejavu Sans', 'Andale Mono';
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+
+  & > .row {
+    display: flex;
+    align-items: stretch;
+
+    & button,
+    & > div {
+      min-height: 25px;
+      flex: 5;
+      margin: 5px;
+      display: flex;
+      padding: 0 8px;
+      position: relative;
+    }
+
+    & > div {
+      flex-direction: column;
+      align-items: stretch;
+
+      & > button {
+        margin: 1px -8px;
+
+        & span {
+          height: auto;
+        }
+
+        &:first-child:not(:last-child) {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:last-child:not(:first-child) {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+
+    & button {
+      flex: 5;
+      appearance: none;
+      border: 0;
+      font-size: 1em;
+      line-height: 1;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &.key {
+        font-size: 1.2em;
+        padding-bottom: 3px;
+        padding-top: 7px;
+      }
+
+      &.half {
+        align-self: flex-start;
+
+        & span {
+          height: auto;
+        }
+      }
+
+      &.half.end {
+        align-self: flex-end;
+      }
+
+      & span {
+        height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 5px;
+
+        &.hide {
+          display: none;
+        }
+
+        &:first-child:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        &:last-child:not(:first-child) {
+          margin-top: 0;
+        }
+
+        &.small {
+          font-size: .85em;
+        }
+
+        &.tiny {
+          font-size: .7em;
+        }
+
+        &.f {
+          position: absolute;
+          right: .6em;
+          bottom: .6em;
+          width: auto;
+          height: auto;
+          margin: 0;
+        }
+      }
+
+      &.left {
+        align-items: flex-start;
+      }
+
+      &.right {
+        align-items: flex-end;
+      }
+    }
+  }
+}
